@@ -1,9 +1,6 @@
 package com.example.lenovo.calculatorapplication;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -59,6 +56,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 editText.setText("0.0");
+
                 result = 0;
                 firstFlag = true;
                 clearFlag = false;
@@ -75,6 +73,7 @@ public class MainActivity extends Activity {
                 if (input.equals(".")) {
                     return;
                 }
+
                 if (editText.getText().toString().equals("0.0")) {
                     editText.setText("");
                 }
@@ -85,6 +84,9 @@ public class MainActivity extends Activity {
                     return;
                 }
                 if (editTextStr.equals("-") && input.equals(".")) {
+                    return;
+                }
+                if (editTextStr.equals("0") && !input.equals(".")) {
                     return;
                 }
             }

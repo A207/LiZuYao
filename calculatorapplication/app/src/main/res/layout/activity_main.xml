@@ -127,7 +127,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="50sp"
-            android:text="Result" android:layout_columnspan="4"
+            android:text="=" android:layout_span="4"
             android:gravity="center_vertical|center_horizontal"/>
     </TableRow>
-</TableLayout> 
+</TableLayout>
